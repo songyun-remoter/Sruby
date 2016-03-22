@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<blockquote>
+    <strong>标题:</strong>
+    <p>
+    <%= @post.title %>
+    </p>
+</blockquote>
+
+<blockquote>
+  <strong>内容:</strong>
+  <p>
+    <%= @post.body %>
+  </p>
+</blockquote>
+
+<p>
+  <strong>作者:</strong>
+  <%= @post.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post),class: "btn btn-default" %> |
+<%= link_to 'Back', posts_path,class: "btn btn-default" %>
