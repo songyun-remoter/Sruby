@@ -13,20 +13,20 @@
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email , class: "form-control" %>
   </div>
 
   <div class="field">
      <%= f.label :password %><br />
-     <%= f.password_field :password %>
+     <%= f.password_field :password , class: "form-control"%>
   </div>
 
   <div class="field">
      <%= f.label :password_confirmation %><br />
-     <%= f.password_field :password_confirmation %>
+     <%= f.password_field :password_confirmation , class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "创建用户" ,class: "btn btn-default"%>
   </div>
 <% end %>
