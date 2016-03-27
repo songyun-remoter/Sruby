@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>用户列表</h1>
 
-<table>
+<table  class="table table-striped .table-bordered table-hover">
   <thead>
     <tr>
-      <th>Email</th>
-      <th>Crypted password</th>
+      <th>用户邮箱</th>
+      <th>Crypted密码</th>
       <th>Salt</th>
       <th colspan="3"></th>
     </tr>
@@ -18,9 +18,9 @@
         <td><%= user.email %></td>
         <td><%= user.crypted_password %></td>
         <td><%= user.salt %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '查看', user,class: "btn btn-info" %></td>
+        <td><%= link_to '编辑', edit_user_path(user) ,class: "btn btn-primary" %></td>
+        <td><%= link_to '删除', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to '添加', new_user_path , class: "btn btn-default" %>
